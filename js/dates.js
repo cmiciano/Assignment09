@@ -1,45 +1,20 @@
 //STEP 1
-/*
-et d = new Date()
-console.log(d.getDate()
 
-et d = new Date()
-console.log(d.getDay())
 
-et d = new Date()
-console.log(d.getMonth())
-
-et d = new Date()
-console.log(d.toDateString()
 // Create an application that gets the number of days in a month. Display that result within the console window.
-*/
 
-// get month
-// get days in month
-// let d = new Date(year, month, day
-
-let inpDate = prompt("Input date in format MM/DD/YYYY:")
-let partDate = new Date(inpDate)
-let month = partDate.getMonth()
-console.log(new Date(inpDate))
-console.log(month)
-
+// Month in JavaScript is 0-indexed (January is 0, February is 1, etc), 
+// but by using 0 as the day it will give us the last day of the prior
+// month. So passing in 1 as the month number will return the last day
+// of January, not February
 /*
-function daysInMonth(inpMonth) {
-    var now = new Date();
-    return new Date(now.getFullYear(), now.getMonth()+1, 0).getDate();
-  }
-
-  let inputMonth = prompt("Input a month: January, February, March etc. :")
-  let monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  let inpMonthInd = monthNames.indexOf(inputMonth)
-
-
-  let now = new Date()
-  let justDate = new Date(now.getFullYear(), now.getMonth()+1, 0)
-  console.log(justDate)
-  console.log(daysInThisMonth())
-  */
+let date = prompt("Enter date in format MM/YYYY")
+let splitDate = date.split("/")
+let partDate = new Date(splitDate[1], splitDate[0], 0)
+let numDaysInMonth = partDate.getDate()
+console.log(partDate.getDate())
+*/
+  
   
 //STEP 2
 // Create an application that gets the month name from a particular date. Display that result within the console window.
@@ -52,7 +27,6 @@ let inpMonthName = monthNames[inpMonthInd]
 console.log(inpMonthName)
 */
 
-//console.log(part.getDate())
 
 //STEP 3
 // Create an application that tests whether a date is a weekend. Display that result within the console window.

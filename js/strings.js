@@ -81,9 +81,11 @@ alert(text.search(word))
 
 /*
 let old_string = "The quick brown fox jumps over the lazy dog"
-//alert(old_string.lastIndexOf("lazy")) //lazy at index 35
+//alert(old_string.lastIndexOf("the lazy dog")) //the lazy dog starts at index 31
+alert(old_string.lastIndexOf("g")) //g is at index 42, remember indexEnd of substring is exclusive
 
-let new_string = old_string.substring(35, 39)
+
+let new_string = old_string.substring(31, 43)
 alert(new_string.toUpperCase())
 */
 
